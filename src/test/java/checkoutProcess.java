@@ -9,17 +9,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import FrontEnd.PageObject.landingPageObject;
+import FrontEnd.PageObject.productCatalogPageObject;
+
 public class checkoutProcess {
 
 	public static void main(String args[]) throws InterruptedException {
 		String productName = "ZARA COAT 3";
 		WebDriver driver = new ChromeDriver();
+		landingPageObject lp = new landingPageObject(driver);
+		lp.goToLanding();
+		lp.loginApplication("manoharkantjoshi@gmail.com","Admin123");
+		productCatalogPageObject pc = new productCatalogPageObject(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
-		driver.get("https://rahulshettyacademy.com/client/");
-		driver.findElement(By.id("userEmail")).sendKeys("manoharkantjoshi@gmail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("Admin123");
-		driver.findElement(By.id("login")).click();
+	
 		WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wt.until(ExpectedConditions.visibilityOfElementLocated(
 				By.cssSelector("div[class=\"card\"] div[class=\"card-body\"] button:last-child")));
