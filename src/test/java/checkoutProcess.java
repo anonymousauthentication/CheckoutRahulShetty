@@ -1,6 +1,5 @@
 import java.time.Duration;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -8,22 +7,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import FrontEnd.PageObject.LandingPageObject;
+import FrontEnd.PageObject.ProductCatalogPageObject;
 
-import FrontEnd.PageObject.landingPageObject;
-import FrontEnd.PageObject.productCatalogPageObject;
-
-public class checkoutProcess {
-
+public class CheckoutProcess {
 	public static void main(String args[]) throws InterruptedException {
 		String productName = "ZARA COAT 3";
 		WebDriver driver = new ChromeDriver();
-		landingPageObject lp = new landingPageObject(driver);
+		LandingPageObject lp = new LandingPageObject(driver);
 		lp.goToLanding();
-		lp.loginApplication("manoharkantjoshi@gmail.com","Admin123");
-		productCatalogPageObject pc = new productCatalogPageObject(driver);
+		lp.loginApplication("manoharkantjoshi@gmail.com", "Admin123");
+		ProductCatalogPageObject pc = new ProductCatalogPageObject(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
-	
 		WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wt.until(ExpectedConditions.visibilityOfElementLocated(
 				By.cssSelector("div[class=\"card\"] div[class=\"card-body\"] button:last-child")));
@@ -46,7 +42,7 @@ public class checkoutProcess {
 		}
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(100,500)", "");	
+		js.executeScript("window.scrollBy(100,500)", "");
 		driver.findElement(By.cssSelector(".action__submit")).click();
 		System.out.println(driver.findElement(By.tagName("h1")).getText());
 	}

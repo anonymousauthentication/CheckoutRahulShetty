@@ -5,12 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class landingPageObject {
+import utility.UtilityComponent;
+
+public class LandingPageObject extends UtilityComponent {
 	WebDriver driver;
 
-	public landingPageObject(WebDriver driver) {
+	public LandingPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
-		PageFactory.initElements(driver, this.driver);
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(id = "userEmail")
@@ -23,6 +26,7 @@ public class landingPageObject {
 	WebElement login;
 
 	public void loginApplication(String userName, String password) {
+		System.out.println(userName);
 		userEmail.sendKeys(userName);
 		userPass.sendKeys(password);
 		login.click();

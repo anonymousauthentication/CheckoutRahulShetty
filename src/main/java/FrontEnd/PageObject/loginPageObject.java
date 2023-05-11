@@ -1,5 +1,5 @@
 package FrontEnd.PageObject;
 
-public class loginPageObject {
+public class LoginPageObject {
 
 }
