@@ -15,7 +15,6 @@ public class CheckoutProcess {
 		String productName = "ZARA COAT 3";
 		WebDriver driver = new ChromeDriver();
 		LandingPageObject lp = new LandingPageObject(driver);
-		lp.goToLanding();
 		lp.loginApplication("manoharkantjoshi@gmail.com", "Admin123");
 		ProductCatalogPageObject pc = new ProductCatalogPageObject(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

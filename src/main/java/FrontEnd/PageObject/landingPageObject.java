@@ -9,7 +9,7 @@ import utility.UtilityComponent;
 
 public class LandingPageObject extends UtilityComponent {
 	WebDriver driver;
-
+	ProductCatalogPageObject pc ;
 	public LandingPageObject(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -25,14 +25,12 @@ public class LandingPageObject extends UtilityComponent {
 	@FindBy(id = "login")
 	WebElement login;
 
-	public void loginApplication(String userName, String password) {
+	public ProductCatalogPageObject loginApplication(String userName, String password) {
 		System.out.println(userName);
 		userEmail.sendKeys(userName);
 		userPass.sendKeys(password);
 		login.click();
-	}
-
-	public void goToLanding() {
-		driver.get("https://rahulshettyacademy.com/client/");
+	    pc = new ProductCatalogPageObject(driver);
+		return pc;
 	}
 }

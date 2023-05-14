@@ -9,6 +9,7 @@ import utility.UtilityComponent;
 
 public class CartPagePageObject extends UtilityComponent {
 	WebDriver driver;
+	CheckoutPageObject ccp;
 
 	public CartPagePageObject(WebDriver driver) {
 		super(driver);
@@ -19,8 +20,10 @@ public class CartPagePageObject extends UtilityComponent {
 	@FindBy(xpath = "//button[text()=\"Buy Now\"]")
 	WebElement buyNowButton;
 
-	public void buyNow() {
+	public CheckoutPageObject buyNow() {
 		waitForItemToClickable(buyNowButton);	
 		buyNowButton.click(); 
+	    ccp = new CheckoutPageObject(driver);
+	    return ccp;
 	}
 }
