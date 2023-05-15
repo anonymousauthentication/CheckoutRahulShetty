@@ -20,7 +20,7 @@ public class CartPagePageObject extends UtilityComponent {
 	@FindBy(xpath = "//button[text()=\"Buy Now\"]")
 	WebElement buyNowButton;
 
-	public CheckoutPageObject buyNow() {
+	public CheckoutPageObject buyNow()  {
 		waitForItemToClickable(buyNowButton);	
 		buyNowButton.click(); 
 	    ccp = new CheckoutPageObject(driver);

@@ -31,7 +31,7 @@ public class CheckoutPageObject extends UtilityComponent {
 	@FindBy(tagName="h1")
 	WebElement orderText;
 
-	public void placeOrder() {
+	public void placeOrder()  {
 		selectCountry.sendKeys("ind");
 		waitForItemToClickable(selectCountryfromOption1);
 		for (int i = 0; i < selectCountryfromOption.size(); i++) {

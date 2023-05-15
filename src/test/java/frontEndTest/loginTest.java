@@ -8,7 +8,7 @@ import FrontEnd.PageObject.LandingPageObject;
 import common.Base;
 
 public class loginTest extends Base {
-@Test(groups="Login",dependsOnGroups="LaunchBrowser")
+@Test(groups="Login")
 	public void login() throws IOException {
 		getGlobalData();
 		String userName = prop.getProperty("userName");

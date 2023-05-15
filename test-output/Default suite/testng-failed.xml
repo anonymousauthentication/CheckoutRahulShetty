@@ -5,9 +5,18 @@
     <classes>
       <class name="frontEndTest.completeCheckoutTest">
         <methods>
+          <include name="getWebsite"/>
+          <include name="closeBrowser"/>
           <include name="checkoutProcess"/>
         </methods>
       </class> <!-- frontEndTest.completeCheckoutTest -->
+      <class name="frontEndTest.loginTest">
+        <methods>
+          <include name="login"/>
+          <include name="getWebsite"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- frontEndTest.loginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
