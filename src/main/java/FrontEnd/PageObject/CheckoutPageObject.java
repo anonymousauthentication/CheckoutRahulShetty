@@ -1,6 +1,8 @@
 package FrontEnd.PageObject;
 
 import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,17 +23,17 @@ public class CheckoutPageObject extends UtilityComponent {
 
 	@FindBy(css = "button span")
 	List<WebElement> selectCountryfromOption;
-	
+
 	@FindBy(css = "button span")
 	WebElement selectCountryfromOption1;
-	
-	@FindBy(css=".action__submit")
+
+	@FindBy(css = ".action__submit")
 	WebElement placeOrder;
-	
-	@FindBy(tagName="h1")
+
+	@FindBy(tagName = "h1")
 	WebElement orderText;
 
-	public void placeOrder()  {
+	public void placeOrder() {
 		selectCountry.sendKeys("ind");
 		waitForItemToClickable(selectCountryfromOption1);
 		for (int i = 0; i < selectCountryfromOption.size(); i++) {
@@ -41,8 +43,9 @@ public class CheckoutPageObject extends UtilityComponent {
 				break;
 			}
 		}
-		scrollToBottom(500,100);
+		scrollToBottom(500, 100);
 		placeOrder.click();
-		System.out.println(orderText.getText()); 
+		System.out.println(orderText.getText());
+
 	}
 }

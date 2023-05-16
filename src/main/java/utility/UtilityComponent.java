@@ -32,15 +32,20 @@ public class UtilityComponent extends UtilityComponentLocator {
 	}
 
 	public CartPagePageObject goToCartPage() {
-		waitForItemToClickable(cartButton);
+		handleinterceptError(cartButton);
 		cartButton.click();
 		cp = new CartPagePageObject(driver);
 		return cp;
 	}
 
+	public void handleinterceptError(WebElement el) {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", el);
+	}
+
 	public void waitForItemToClickable(WebElement el) {
-		
-		WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(8));
+		WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wt.until(ExpectedConditions.elementToBeClickable(el));
 	}
 
