@@ -5,18 +5,11 @@
     <classes>
       <class name="frontEndTest.loginTest">
         <methods>
-          <include name="login"/>
+          <include name="login" invocation-numbers="1"/>
           <include name="getWebsite"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- frontEndTest.loginTest -->
-      <class name="frontEndTest.completeCheckoutTest">
-        <methods>
-          <include name="getWebsite"/>
-          <include name="closeBrowser"/>
-          <include name="checkoutProcess"/>
-        </methods>
-      </class> <!-- frontEndTest.completeCheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

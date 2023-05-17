@@ -26,7 +26,6 @@ public class LandingPageObject extends UtilityComponent {
 	WebElement login;
 
 	public ProductCatalogPageObject loginApplication(String userName, String password) {
-		System.out.println(userName);
 		userEmail.sendKeys(userName);
 		userPass.sendKeys(password);
 		login.click();
