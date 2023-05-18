@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-17T23:17:01 IST" name="Default suite" finished-at="2023-05-17T23:17:26 IST" duration-ms="25082">
+  <suite started-at="2023-05-18T22:42:33 IST" name="Default suite" finished-at="2023-05-18T22:42:56 IST" duration-ms="22303">
     <groups>
       <group name="Login">
-        <method signature="loginTest.login(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@32502377]" name="login" class="frontEndTest.loginTest"/>
+        <method signature="loginTest.login2(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@4dbb42b7]" name="login2" class="frontEndTest.loginTest"/>
       </group> <!-- Login -->
     </groups>
-    <test started-at="2023-05-17T23:17:01 IST" name="Default test" finished-at="2023-05-17T23:17:26 IST" duration-ms="25082">
+    <test started-at="2023-05-18T22:42:33 IST" name="Default test" finished-at="2023-05-18T22:42:56 IST" duration-ms="22303">
       <class name="frontEndTest.loginTest">
-        <test-method is-config="true" signature="getWebsite()[pri:0, instance:frontEndTest.loginTest@32502377]" started-at="2023-05-17T23:17:01 IST" name="getWebsite" finished-at="2023-05-17T23:17:12 IST" duration-ms="10895" status="PASS">
+        <test-method is-config="true" signature="getWebsite()[pri:0, instance:frontEndTest.loginTest@4dbb42b7]" started-at="2023-05-18T22:42:33 IST" name="getWebsite" finished-at="2023-05-18T22:42:44 IST" duration-ms="10202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebsite -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@32502377]" started-at="2023-05-17T23:17:12 IST" name="login" data-provider="getData" finished-at="2023-05-17T23:17:15 IST" duration-ms="3234" status="PASS">
+        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@4dbb42b7]" started-at="2023-05-18T22:42:44 IST" name="login2" data-provider="getData" finished-at="2023-05-18T22:42:44 IST" duration-ms="801" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,8 +29,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@32502377]" started-at="2023-05-17T23:17:15 IST" name="login" data-provider="getData" finished-at="2023-05-17T23:17:25 IST" duration-ms="10185" status="FAIL">
+        </test-method> <!-- login2 -->
+        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@4dbb42b7]" started-at="2023-05-18T22:42:44 IST" name="login2" data-provider="getData" finished-at="2023-05-18T22:42:55 IST" duration-ms="10689" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -45,26 +45,26 @@
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userEmail"}
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userPassword"}
   (Session info: chrome=113.0.5672.93)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f2a04acdf0e33e89adeb1a225b57ccb5, findElement {using=id, value=userEmail}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55168/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f2a04acdf0e33e89adeb1a225b57ccb5]]>
+Command: [2219b3b812cdad4602fb18780d12ef10, findElement {using=id, value=userPassword}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55039/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2219b3b812cdad4602fb18780d12ef10]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#userEmail"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#userPassword"}
   (Session info: chrome=113.0.5672.93)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f2a04acdf0e33e89adeb1a225b57ccb5, findElement {using=id, value=userEmail}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55168/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f2a04acdf0e33e89adeb1a225b57ccb5
+Command: [2219b3b812cdad4602fb18780d12ef10, findElement {using=id, value=userPassword}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55039/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2219b3b812cdad4602fb18780d12ef10
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -85,7 +85,7 @@ at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(Def
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
 at FrontEnd.PageObject.LandingPageObject.loginApplication(LandingPageObject.java:30)
-at frontEndTest.loginTest.login(loginTest.java:18)
+at frontEndTest.loginTest.login2(loginTest.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,8 +119,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:frontEndTest.loginTest@32502377]" started-at="2023-05-17T23:17:25 IST" name="closeBrowser" finished-at="2023-05-17T23:17:26 IST" duration-ms="537" status="PASS">
+        </test-method> <!-- login2 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:frontEndTest.loginTest@4dbb42b7]" started-at="2023-05-18T22:42:55 IST" name="closeBrowser" finished-at="2023-05-18T22:42:56 IST" duration-ms="513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

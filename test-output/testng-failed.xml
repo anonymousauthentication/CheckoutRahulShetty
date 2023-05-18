@@ -5,8 +5,8 @@
     <classes>
       <class name="frontEndTest.loginTest">
         <methods>
-          <include name="login" invocation-numbers="1"/>
           <include name="getWebsite"/>
+          <include name="login2" invocation-numbers="1"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- frontEndTest.loginTest -->

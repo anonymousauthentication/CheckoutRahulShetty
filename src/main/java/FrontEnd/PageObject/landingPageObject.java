@@ -32,4 +32,6 @@ public class LandingPageObject extends UtilityComponent {
 	    pc = new ProductCatalogPageObject(driver);
 		return pc;
 	}
+	
+	
 }
