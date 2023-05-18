@@ -18,7 +18,7 @@ public class loginTest extends Base {
 		LandingPageObject lp = new LandingPageObject(driver);
 		lp.loginApplication(userName, passWord);
 	}
-	
+	@Test(dataProvider="getDataHash")
 	public void login(HashMap<String, String> input) throws IOException {
 		getGlobalData();
 		//String userName = prop.getProperty("userName");
@@ -32,10 +32,15 @@ public class loginTest extends Base {
     return new Object[][] {{"manoharkantjoshi@gmail.com","Admin123"},{"abc@gmail.com","Admin123"}};
 	}
 	
-	public void getDataHash() {
+	@DataProvider
+	public Object getDataHash() {
 		HashMap<String, String> map = new HashMap<String,String>();
 		map.put("email", "manoharkantjoshi@gmail.com");
 		map.put("password", "Admin123");
+		
+		HashMap<String, String> map1 = new HashMap<String,String>();
+		map1.put("email", "manoharkantjoshi12@gmail.com");
+		map1.put("password", "Admin123");
+		return new Object[][] {{map},{map1}};
 	}
-	
 }
