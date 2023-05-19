@@ -2,6 +2,7 @@ package frontEndTest;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class loginTest extends Base {
 		LandingPageObject lp = new LandingPageObject(driver);
 		lp.loginApplication(userName, passWord);
 	}
-	@Test(dataProvider="getDataHash")
+	@Test(dataProvider="getDataHashJson")
 	public void login(HashMap<String, String> input) throws IOException {
 		getGlobalData();
 		//String userName = prop.getProperty("userName");
@@ -42,5 +43,11 @@ public class loginTest extends Base {
 		map1.put("email", "manoharkantjoshi12@gmail.com");
 		map1.put("password", "Admin123");
 		return new Object[][] {{map},{map1}};
+	}
+	
+	@DataProvider
+	public Object getDataHashJson() throws IOException {
+		List<HashMap<String, String>> data=  getJsonDataToMap(System.getProperty("user.dir") + "/src/test/java/FrontendData/data.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
 }
