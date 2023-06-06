@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FrontendTestComponent.listener">
+      <class name="frontEndTest.loginTest">
         <methods>
-          <include name="initialDemo"/>
+          <include name="getWebsite"/>
+          <include name="login2" invocation-numbers="1"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- FrontendTestComponent.listener -->
+      </class> <!-- frontEndTest.loginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

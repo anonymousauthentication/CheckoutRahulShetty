@@ -35,7 +35,7 @@ public class CheckoutPageObject extends UtilityComponent {
 
 	public void placeOrder() {
 		selectCountry.sendKeys("ind");
-		waitForItemToClickable(selectCountryfromOption1);
+		waitForItemToVisible(selectCountryfromOption1);
 		for (int i = 0; i < selectCountryfromOption.size(); i++) {
 			System.out.println("For loop");
 			if (selectCountryfromOption.get(i).getText().equalsIgnoreCase("India")) {

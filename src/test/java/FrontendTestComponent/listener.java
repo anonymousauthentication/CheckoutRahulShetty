@@ -1,33 +1,47 @@
 package FrontendTestComponent;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
-public class listener {
-	ExtentReports extent;
+import common.Base;
+import resources.ExtentReporterNG;
 
-	public void config() {
-		String path = System.getProperty("user.dir") + "//ExtentsReport///index.html";
-		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
-		reporter.config().setReportName("Web Automation Report");
-		reporter.config().setDocumentTitle("Test report");
+public class listener extends Base implements ITestListener {
+	public static ExtentTest test;
+	ExtentReports extent = ExtentReporterNG.getReportObject();
 
-		extent = new ExtentReports();
-		extent.attachReporter(reporter);
-		extent.setSystemInfo("Senior SDET", "Manohar");
+	public void onTestStart(ITestResult result) {
+		test = extent.createTest(result.getMethod().getMethodName());
 	}
-
-	@Test
-	public void initialDemo() {
-		config();
-		extent.createTest("Test Started");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://rahulshettyacademy.com/");
-		System.out.println(driver.getTitle());
+	public void onTestSuccess(ITestResult result) {
+		test.log(Status.PASS, "Test Pass");
+	}
+	public void onTestFailure(ITestResult result) {
+	//	try {
+	//		driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+		//} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e1) {
+			// TODO Auto-generated catch block
+		//	e1.printStackTrace();
+		//}
+		test.fail(result.getThrowable());
+		String path = null;
+		try {
+			path = getScreenShot(result.getMethod().getMethodName(),driver);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		test.addScreenCaptureFromPath(path, result.getTestName());
+	}
+	
+	public void onTestSkipped(ITestResult result) {
 		extent.flush();
 	}
 }

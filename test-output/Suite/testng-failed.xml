@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Complte sCheckout(failed)">
+  <listeners>
+    <listener class-name="FrontendTestComponent.listener"/>
+  </listeners>
+  <test thread-count="5" name="Complete Checkout(failed)">
     <classes>
+      <class name="frontEndTest.loginTest">
+        <methods>
+          <include name="login" invocation-numbers="0 1"/>
+          <include name="getWebsite"/>
+          <include name="login2" invocation-numbers="1"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- frontEndTest.loginTest -->
       <class name="frontEndTest.completeCheckoutTest">
         <methods>
           <include name="getWebsite"/>
@@ -10,13 +21,6 @@
           <include name="checkoutProcess"/>
         </methods>
       </class> <!-- frontEndTest.completeCheckoutTest -->
-      <class name="frontEndTest.loginTest">
-        <methods>
-          <include name="login"/>
-          <include name="getWebsite"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- frontEndTest.loginTest -->
     </classes>
-  </test> <!-- Complte sCheckout(failed) -->
+  </test> <!-- Complete Checkout(failed) -->
 </suite> <!-- Failed suite [Suite] -->

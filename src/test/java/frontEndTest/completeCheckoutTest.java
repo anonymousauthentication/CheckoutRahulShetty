@@ -15,6 +15,6 @@ public class completeCheckoutTest extends Base {
 		pc.addToCart(productName);
 		CartPagePageObject cp = pc.goToCartPage();
 		CheckoutPageObject ccp = cp.buyNow();
-		ccp.placeOrder();
+		ccp.placeOrder(); 
 	}
 }

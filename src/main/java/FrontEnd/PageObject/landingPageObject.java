@@ -25,13 +25,11 @@ public class LandingPageObject extends UtilityComponent {
 	@FindBy(id = "login")
 	WebElement login;
 
-	public ProductCatalogPageObject loginApplication(String userName, String password) {
+	public ProductCatalogPageObject loginApplication(String userName, String password) throws InterruptedException {
 		userEmail.sendKeys(userName);
 		userPass.sendKeys(password);
 		login.click();
 	    pc = new ProductCatalogPageObject(driver);
 		return pc;
 	}
-	
-	
 }

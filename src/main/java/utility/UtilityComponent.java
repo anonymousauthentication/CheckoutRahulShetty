@@ -48,6 +48,11 @@ public class UtilityComponent extends UtilityComponentLocator {
 		WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wt.until(ExpectedConditions.elementToBeClickable(el));
 	}
+	
+	public void waitForItemToVisible(WebElement el) {
+		WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wt.until(ExpectedConditions.visibilityOf(el));
+	}
 
 	public void scrollToBottom(int to, int from) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

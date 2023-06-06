@@ -8,7 +8,6 @@
 		<classes>
 			<class name="frontEndTest.loginTest" />
 			<class name="frontEndTest.completeCheckoutTest" />
-
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
