@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse--520564342\testng-customsuite.xml</span>
+                    <span>C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse--2045638740\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,  1 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,10 +104,24 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="frontEndTest.loginTest" class="method navigator-link" hash-for-method="login2(abc@gmail.com, Admin123)">login2(abc@gmail.com, Admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="frontEndTest.loginTest" class="method navigator-link" hash-for-method="login({password=Admin123, email=manoharkantjoshi12@gmail.com})">login({password=Admin123, email=manoharkantjoshi12@gmail.com})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Default_suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="frontEndTest.completeCheckoutTest" class="method navigator-link" hash-for-method="checkoutProcess">checkoutProcess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,7 +132,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="frontEndTest.loginTest" class="method navigator-link" hash-for-method="login2(manoharkantjoshi@gmail.com, Admin123)">login2(manoharkantjoshi@gmail.com, Admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="frontEndTest.loginTest" class="method navigator-link" hash-for-method="login({password=Admin123, email=manoharkantjoshi@gmail.com})">login({password=Admin123, email=manoharkantjoshi@gmail.com})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -141,19 +155,19 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login2(abc@gmail.com, Admin123)">
-                  </a> <!-- login2(abc@gmail.com, Admin123) -->
-                  <span class="method-name">login2</span>
-                  <span class="parameters">(abc@gmail.com, Admin123)</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=113.0.5672.127)
+                  <a name="login({password=Admin123, email=manoharkantjoshi12@gmail.com})">
+                  </a> <!-- login({password=Admin123, email=manoharkantjoshi12@gmail.com}) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">({password=Admin123, email=manoharkantjoshi12@gmail.com})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#userPassword&quot;}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [495dbc16432557b4d3461c4a622e28b1, sendKeysToElement {id=1EB145E02D08A6FFA38FAD87AB6AD59A_element_6, value=[Ljava.lang.CharSequence;@6c1832aa}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59356/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (495dbc16432557b4d3461c4a622e28b1)] -&gt; id: userEmail]
-Session ID: 495dbc16432557b4d3461c4a622e28b1
+Command: [0f4c2896d9bff70eff8768218e3686bc, findElement {using=id, value=userPassword}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65396/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f4c2896d9bff70eff8768218e3686bc
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -166,16 +180,15 @@ Session ID: 495dbc16432557b4d3461c4a622e28b1
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-	at FrontEnd.PageObject.LandingPageObject.loginApplication(LandingPageObject.java:29)
-	at frontEndTest.loginTest.login2(loginTest.java:20)
+	at FrontEnd.PageObject.LandingPageObject.loginApplication(LandingPageObject.java:30)
+	at frontEndTest.loginTest.login(loginTest.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -210,6 +223,43 @@ Session ID: 495dbc16432557b4d3461c4a622e28b1
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">frontEndTest.completeCheckoutTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkoutProcess">
+                  </a> <!-- checkoutProcess -->
+                  <span class="method-name">checkoutProcess</span>
+                  <div class="stack-trace">java.lang.Throwable: Method completeCheckoutTest.checkoutProcess()[pri:0, instance:frontEndTest.completeCheckoutTest@7db12bb6] depends on not successfully finished methods in group &quot;Login&quot;
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-skipped -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -218,10 +268,10 @@ Session ID: 495dbc16432557b4d3461c4a622e28b1
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login2(manoharkantjoshi@gmail.com, Admin123)">
-                  </a> <!-- login2(manoharkantjoshi@gmail.com, Admin123) -->
-                  <span class="method-name">login2</span>
-                  <span class="parameters">(manoharkantjoshi@gmail.com, Admin123)</span>
+                  <a name="login({password=Admin123, email=manoharkantjoshi@gmail.com})">
+                  </a> <!-- login({password=Admin123, email=manoharkantjoshi@gmail.com}) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">({password=Admin123, email=manoharkantjoshi@gmail.com})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -229,7 +279,7 @@ Session ID: 495dbc16432557b4d3461c4a622e28b1
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse--520564342\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse--2045638740\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -238,9 +288,14 @@ Session ID: 495dbc16432557b4d3461c4a622e28b1
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;frontEndTest.completeCheckoutTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkoutProcess&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- frontEndTest.completeCheckoutTest --&gt;
       &lt;class name=&quot;frontEndTest.loginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;login2&quot;/&gt;
+          &lt;include name=&quot;login&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- frontEndTest.loginTest --&gt;
     &lt;/classes&gt;
@@ -256,7 +311,7 @@ Session ID: 495dbc16432557b4d3461c4a622e28b1
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Default test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -267,10 +322,10 @@ Session ID: 495dbc16432557b4d3461c4a622e28b1
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Login1</span>
+              <span class="test-group-name">Login</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">login2</span>
+                <span class="method-in-group-name">login</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -290,20 +345,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login2')
+data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'frontEndTest.loginTest')
-data.setCell(0, 3, 981);
+data.setCell(0, 3, 10537);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login2')
+data.setCell(1, 1, 'login')
 data.setCell(1, 2, 'frontEndTest.loginTest')
-data.setCell(1, 3, 359);
+data.setCell(1, 3, 811);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'checkoutProcess')
+data.setCell(2, 2, 'frontEndTest.completeCheckoutTest')
+data.setCell(2, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -318,13 +377,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">frontEndTest.loginTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">login</span>
+                <span class="ignored-method-name">getWebsite</span>
+                <br/>
+                <span class="ignored-method-name">login2</span>
+                <br/>
+                <span class="ignored-method-name">closeBrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">frontEndTest.completeCheckoutTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getExcelData1</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -336,24 +406,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">frontEndTest.loginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">frontEndTest.completeCheckoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">getWebsite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">frontEndTest.loginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">login2(manoharkantjoshi@gmail.com, Admin123)</span>
-                <span class="method-start">8018 ms</span>
+                <span class="method-name">login({password=Admin123, email=manoharkantjoshi@gmail.com})</span>
+                <span class="method-start">11737 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">login2(abc@gmail.com, Admin123)</span>
-                <span class="method-start">9019 ms</span>
+                <span class="method-name">login({password=Admin123, email=manoharkantjoshi12@gmail.com})</span>
+                <span class="method-start">12555 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">frontEndTest.completeCheckoutTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">checkoutProcess</span>
+                <span class="method-start">23108 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">9417 ms</span>
+                <span class="method-start">23119 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

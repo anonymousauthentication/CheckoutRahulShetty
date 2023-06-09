@@ -1,70 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
+<testng-results ignored="4" total="7" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-22T23:54:12 IST" name="Default suite" finished-at="2023-05-22T23:54:21 IST" duration-ms="9675">
+  <suite started-at="2023-06-07T23:18:28 IST" name="Default suite" finished-at="2023-06-07T23:18:51 IST" duration-ms="23430">
     <groups>
-      <group name="Login1">
-        <method signature="loginTest.login2(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@4b8ee4de]" name="login2" class="frontEndTest.loginTest"/>
-      </group> <!-- Login1 -->
+      <group name="Login">
+        <method signature="loginTest.login(java.util.HashMap)[pri:0, instance:frontEndTest.loginTest@942a29c]" name="login" class="frontEndTest.loginTest"/>
+      </group> <!-- Login -->
     </groups>
-    <test started-at="2023-05-22T23:54:12 IST" name="Default test" finished-at="2023-05-22T23:54:21 IST" duration-ms="9675">
-      <class name="frontEndTest.loginTest">
-        <test-method is-config="true" signature="getWebsite()[pri:0, instance:frontEndTest.loginTest@4b8ee4de]" started-at="2023-05-22T23:54:12 IST" name="getWebsite" finished-at="2023-05-22T23:54:20 IST" duration-ms="7958" status="PASS">
+    <test started-at="2023-06-07T23:18:28 IST" name="Default test" finished-at="2023-06-07T23:18:51 IST" duration-ms="23430">
+      <class name="frontEndTest.completeCheckoutTest">
+        <test-method is-config="true" signature="getWebsite()[pri:0, instance:frontEndTest.completeCheckoutTest@7db12bb6]" started-at="2023-06-07T23:18:28 IST" name="getWebsite" finished-at="2023-06-07T23:18:39 IST" duration-ms="11625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebsite -->
-        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@4b8ee4de]" started-at="2023-05-22T23:54:20 IST" name="login2" data-provider="getData" finished-at="2023-05-22T23:54:21 IST" duration-ms="981" status="PASS">
+        <test-method signature="checkoutProcess()[pri:0, instance:frontEndTest.completeCheckoutTest@7db12bb6]" started-at="2023-06-07T23:18:51 IST" name="checkoutProcess" depends-on-groups="Login" finished-at="2023-06-07T23:18:51 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method completeCheckoutTest.checkoutProcess()[pri:0, instance:frontEndTest.completeCheckoutTest@7db12bb6] depends on not successfully finished methods in group "Login"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method completeCheckoutTest.checkoutProcess()[pri:0, instance:frontEndTest.completeCheckoutTest@7db12bb6] depends on not successfully finished methods in group "Login"
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutProcess -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:frontEndTest.completeCheckoutTest@7db12bb6]" started-at="2023-06-07T23:18:51 IST" name="closeBrowser" finished-at="2023-06-07T23:18:51 IST" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- frontEndTest.completeCheckoutTest -->
+      <class name="frontEndTest.loginTest">
+        <test-method signature="login(java.util.HashMap)[pri:0, instance:frontEndTest.loginTest@942a29c]" started-at="2023-06-07T23:18:39 IST" name="login" data-provider="getDataHash" finished-at="2023-06-07T23:18:40 IST" duration-ms="811" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[manoharkantjoshi@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Admin123]]>
+                <![CDATA[{password=Admin123, email=manoharkantjoshi@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login2 -->
-        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:frontEndTest.loginTest@4b8ee4de]" started-at="2023-05-22T23:54:21 IST" name="login2" data-provider="getData" finished-at="2023-05-22T23:54:21 IST" duration-ms="359" status="FAIL">
+        </test-method> <!-- login -->
+        <test-method signature="login(java.util.HashMap)[pri:0, instance:frontEndTest.loginTest@942a29c]" started-at="2023-06-07T23:18:40 IST" name="login" data-provider="getDataHash" finished-at="2023-06-07T23:18:51 IST" duration-ms="10537" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[abc@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Admin123]]>
+                <![CDATA[{password=Admin123, email=manoharkantjoshi12@gmail.com}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=113.0.5672.127)
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userPassword"}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [495dbc16432557b4d3461c4a622e28b1, sendKeysToElement {id=1EB145E02D08A6FFA38FAD87AB6AD59A_element_6, value=[Ljava.lang.CharSequence;@6c1832aa}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59356/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (495dbc16432557b4d3461c4a622e28b1)] -> id: userEmail]
-Session ID: 495dbc16432557b4d3461c4a622e28b1]]>
+Command: [0f4c2896d9bff70eff8768218e3686bc, findElement {using=id, value=userPassword}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65396/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f4c2896d9bff70eff8768218e3686bc]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=113.0.5672.127)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#userPassword"}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [495dbc16432557b4d3461c4a622e28b1, sendKeysToElement {id=1EB145E02D08A6FFA38FAD87AB6AD59A_element_6, value=[Ljava.lang.CharSequence;@6c1832aa}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59356/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (495dbc16432557b4d3461c4a622e28b1)] -> id: userEmail]
-Session ID: 495dbc16432557b4d3461c4a622e28b1
+Command: [0f4c2896d9bff70eff8768218e3686bc, findElement {using=id, value=userPassword}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65396/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f4c2896d9bff70eff8768218e3686bc
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -77,16 +105,15 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at FrontEnd.PageObject.LandingPageObject.loginApplication(LandingPageObject.java:29)
-at frontEndTest.loginTest.login2(loginTest.java:20)
+at FrontEnd.PageObject.LandingPageObject.loginApplication(LandingPageObject.java:30)
+at frontEndTest.loginTest.login(loginTest.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,14 +144,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login2 -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:frontEndTest.loginTest@4b8ee4de]" started-at="2023-05-22T23:54:21 IST" name="closeBrowser" finished-at="2023-05-22T23:54:21 IST" duration-ms="249" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
+        </test-method> <!-- login -->
       </class> <!-- frontEndTest.loginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

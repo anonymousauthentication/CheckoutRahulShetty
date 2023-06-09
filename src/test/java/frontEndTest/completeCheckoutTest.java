@@ -1,5 +1,7 @@
 package frontEndTest;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 import FrontEnd.PageObject.CartPagePageObject;
 import FrontEnd.PageObject.CheckoutPageObject;
@@ -16,5 +18,10 @@ public class completeCheckoutTest extends Base {
 		CartPagePageObject cp = pc.goToCartPage();
 		CheckoutPageObject ccp = cp.buyNow();
 		ccp.placeOrder(); 
+	}
+	
+	@Test
+	public void getExcelData1() throws IOException {
+		getExcelData();
 	}
 }
